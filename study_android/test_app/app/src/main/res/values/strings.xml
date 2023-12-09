@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Test_app</string>
     <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="test_app">test_app</string>
+    <string name="user_info">"회원 정보"</string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_plus">plus</string>
+
+
 </resources>

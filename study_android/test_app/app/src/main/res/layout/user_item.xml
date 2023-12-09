@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+   <data>
+       <variable
+           name="user"
+           type="com.example.test_app.data.User" />
+   </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@{user.userName}"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toStartOf="@id/userAge"
+           app:layout_constraintBottom_toBottomOf="@id/userPicture"
+            app:layout_constraintStart_toEndOf="@id/userPicture"/>
+
+        <ImageView
+            android:id="@+id/userPicture"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:src="@drawable/icon_user_person"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.013"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.542" />
+
+        <TextView
+            android:id="@+id/userAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="@{String.valueOf(user.UserAge)}"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/userPicture"
+            app:layout_constraintStart_toEndOf="@id/userName" />
+
+        <TextView
+            android:id="@+id/userSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.userSubject}"
+            app:layout_constraintBottom_toBottomOf="@id/userPicture"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.882"
+            app:layout_constraintStart_toEndOf="@id/userAge" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+</layout>
