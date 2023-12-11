@@ -54,7 +54,6 @@ class SimpleFragment : Fragment() {
         userData.add(User("Kate", 19, "c++"))
 
         val adapter = UserAdapter(userData)
-
         binding.recycler.adapter = adapter
         binding.recycler.layoutManager = LinearLayoutManager(this.context)
 
@@ -63,7 +62,6 @@ class SimpleFragment : Fragment() {
             override fun onClick(view: View, position: Int) {
                 Toast.makeText(activity, userData[position].userSubject.toString(), Toast.LENGTH_LONG).show()
             }
-
         }
 
         return binding.root

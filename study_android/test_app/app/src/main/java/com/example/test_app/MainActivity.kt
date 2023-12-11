@@ -17,7 +17,6 @@ import com.example.test_app.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var data : List<TagData>
-
     private lateinit var binding : ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,10 +45,11 @@ class MainActivity : AppCompatActivity() {
         adapter.itemClick = object : TagAdapter.ItemClick {
             override fun onClick(view: View, position: Int) {
                 when(position){
-                  //  0 ->  setFragment(SimpleFragment())
                 0 -> setFragment(SimpleFragment())
                 1 -> setDialog(1,"프래그먼크 + 데이터바인딩 + 뷰모델 적용", ViewModelFragment())
-                2 -> setDialog(2,"viewModel + recyclerview + LiveData 적용", Test3Fragment())
+                2 -> setDialog(2,"recyclerview에 입력값 담기", Test3Fragment())
+              //  3 -> setDialog(3, "네비게이션 넣기", Test4Fragment())
+               //  4 -> setDialog(4, "tab넣기 + 스피너 + viewpager2", Test5Fragment())
 
                     else -> Toast.makeText(this@MainActivity, data[position].tagName.toString(), Toast.LENGTH_LONG).show()
                 }
