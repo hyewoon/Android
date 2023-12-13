@@ -47,16 +47,14 @@ class MainActivity : AppCompatActivity() {
                 when(position){
                 0 -> setFragment(SimpleFragment())
                 1 -> setDialog(1,"프래그먼크 + 데이터바인딩 + 뷰모델 적용", ViewModelFragment())
-                2 -> setDialog(2,"recyclerview에 입력값 담기", Test3Fragment())
-              //  3 -> setDialog(3, "네비게이션 넣기", Test4Fragment())
+                2 -> setDialog(2,"recyclerview에 editText입력값 담기", Test3Fragment())
+                 3 -> setDialog(3, "recyclerview에 viewModel 적용 + Livedata도 추가", Test4Fragment())
                //  4 -> setDialog(4, "tab넣기 + 스피너 + viewpager2", Test5Fragment())
 
                     else -> Toast.makeText(this@MainActivity, data[position].tagName.toString(), Toast.LENGTH_LONG).show()
                 }
-
             }
         }
-
     }
 
     private fun setFragment(fragment: Fragment) {

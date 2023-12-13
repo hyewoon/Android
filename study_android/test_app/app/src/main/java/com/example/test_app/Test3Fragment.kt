@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.test_app.adapter.Test3Adapter
@@ -36,13 +37,19 @@ class Test3Fragment : Fragment() {
 
 
         binding.todoBtn.setOnClickListener {
-            val todo: String? = binding.todoInput.text.toString()
-              if(todo.isNullOrBlank()){
-                     Log.d("list", "null값이다")
+            val todo: String = binding.todoInput.text.toString()
+
+             if(todo.isBlank()){
+                    Toast.makeText(context, "할일을 입력 하세요!", Toast.LENGTH_LONG).show()
                 }else {
                     todoData.add(TodoData(todo))
                     adapter.notifyItemInserted(todoData.size)
                 }
+            /*todo?.let {
+                todoData.add(TodoData(it))
+                adapter.notifyItemInserted(todoData.size-1)
+
+            }*/
         }
 
         return binding.root
