@@ -8,7 +8,8 @@
 
 
 ## level1  : DatBinding + recyclerview + 아이템 클릭이벤트 구현
-https://github.com/hyewoon/android</br>
+<img width="218" alt="image" src="https://github.com/hyewoon/android/assets/113662682/1fc10cee-17c3-4ee6-81cd-8e32afbd7007">
+</br>
 
 dataClass에 더미데이터 넣고 처리</br>
 
